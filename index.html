@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protocolo Alemanha 🇩🇪</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="profile">
+          <div class="avatar">🧠</div>
+          <h2>Dev Expat</h2>
+          <p>Nível: <span id="level">1</span></p>
+
+          <div class="xp-container">
+            <p>XP: <span id="xp-atual">0</span> / 100</p>
+            <div class="progress-bar"><div class="fill" id="xp-bar"></div></div>
+          </div>
+
+          <div class="coins-container">
+            <p>💰 Moedas: <span id="coins-atual">0</span></p>
+          </div>
+        </div>
+
+        <div class="shop">
+          <h3>🛒 Mercado de Dopamina</h3>
+
+          <div class="shop-item">
+            <p>📱 Redes Sociais (30m)</p>
+            <button onclick="comprarItem(30)">30 💰</button>
+          </div>
+
+          <div class="shop-item">
+            <p>Conteúdo Visual</p>
+            <button onclick="comprarItem(100)">100 💰</button>
+          </div>
+
+          <div class="shop-item">
+            <p>🎮 Jogar (1h)</p>
+            <button onclick="comprarItem(60)">60 💰</button>
+          </div>
+
+          <div class="shop-item">
+            <p>📺 Série (Ruptura)</p>
+            <button onclick="comprarItem(50)">50 💰</button>
+          </div>
+        </div>
+
+        <div class="shop" style="border-top: 1px solid red; margin-top: 20px">
+          <h3 style="color: #ff4757">⚠️ Zona de Perda</h3>
+          <p style="font-size: 0.8em; color: #888; text-align: center">
+            Procrastinou sem pagar?
+          </p>
+          <button
+            onclick="recaida()"
+            style="
+              background-color: #330000;
+              color: red;
+              border: 1px solid red;
+              margin-top: 5px;
+            "
+          >
+            Assumir Erro (-50 XP)
+          </button>
+        </div>
+      </aside>
+
+      <main class="content">
+        <div class="header-box">
+          <h1>Painel de Controle</h1>
+        </div>
+
+        <div class="quest-board">
+          <div class="quest-card code-quest">
+            <h3>💻 Aula JS/TS (30min)</h3>
+            <p>Foco total</p>
+            <span class="reward">+15 XP | +10 💰</span>
+            <button onclick="completarMissao(this, 15, 10)">Feito</button>
+          </div>
+
+          <div class="quest-card code-quest">
+            <h3>🚀 Projeto Prático (1h)</h3>
+            <p>Job Tracker / API</p>
+            <span class="reward">+30 XP | +25 💰</span>
+            <button onclick="completarMissao(this, 30, 25)">Codar</button>
+          </div>
+
+          <div class="quest-card code-quest">
+            <h3>🇩🇪 Alemão (20min)</h3>
+            <p>Duolingo / Flashcards</p>
+            <span class="reward">+10 XP | +5 💰</span>
+            <button onclick="completarMissao(this, 10, 5)">Lernen</button>
+          </div>
+
+          <div class="quest-card fitness-quest">
+            <h3>⏳ Jejum Intermitente</h3>
+            <p>16h-18h (Só Água/Café)</p>
+            <span class="reward">+20 XP | +15 💰</span>
+            <button onclick="completarMissao(this, 20, 15)">Jejum Pago</button>
+          </div>
+
+          <div class="quest-card fitness-quest">
+            <h3>🏋️‍♂️ Treino do Dia</h3>
+            <p>Shape seco</p>
+            <span class="reward">+25 XP | +15 💰</span>
+            <button onclick="completarMissao(this, 25, 15)">Esmagar</button>
+          </div>
+
+          <div class="quest-card fitness-quest">
+            <h3>🥩 Dieta (2 Refeições)</h3>
+            <p>Zero açúcar/lixo</p>
+            <span class="reward">+15 XP | +10 💰</span>
+            <button onclick="completarMissao(this, 15, 10)">Seguir</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

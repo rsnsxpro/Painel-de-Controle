@@ -1,0 +1,185 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #121212; /* Fundo mais escuro */
+  color: #e0e0e0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 95%;
+  max-width: 1200px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  gap: 30px;
+  flex-wrap: wrap; /* Responsivo para celular */
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #1e1e1e;
+  padding: 25px;
+  border-radius: 16px;
+  width: 280px;
+  flex-shrink: 0;
+  border: 1px solid #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.avatar {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+h2 {
+  text-align: center;
+  margin: 0;
+  color: #fff;
+}
+.subtitle {
+  text-align: center;
+  color: #888;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+.xp-container {
+  background: #2a2a2a;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.progress-bar {
+  background-color: #444;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+.fill {
+  background: linear-gradient(90deg, #00d4ff, #0051ff);
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+.stats ul {
+  list-style: none;
+  padding: 0;
+}
+.stats li {
+  margin-bottom: 10px;
+  font-weight: 500;
+  background: #252525;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.project-tracker {
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+.project-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+  opacity: 0.7;
+}
+
+/* Main Content */
+.content {
+  flex-grow: 1;
+}
+h1 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.quest-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.quest-card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.quest-card:hover {
+  transform: translateY(-5px);
+  border-color: #555;
+}
+.icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.quest-card h3 {
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+.quest-card p {
+  color: #aaa;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+.reward {
+  color: #ffd700;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Cores Específicas */
+.code-quest {
+  border-top: 4px solid #61dafb;
+} /* Azul React */
+.fitness-quest {
+  border-top: 4px solid #ff4757;
+} /* Vermelho Treino */
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  transition: 0.3s;
+}
+
+.code-quest button {
+  background-color: #007acc;
+}
+.code-quest button:hover {
+  background-color: #005fa3;
+}
+
+.fitness-quest button {
+  background-color: #ff4757;
+}
+.fitness-quest button:hover {
+  background-color: #e84118;
+}
+
+button:disabled {
+  background-color: #2d3436 !important;
+  color: #636e72;
+  cursor: not-allowed;
+}
