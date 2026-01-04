@@ -1,5 +1,5 @@
 // --- SISTEMA DE LOGIN SIMPLES ---
-const SENHA_SECRETA = "dev123"; // Troque pela senha que você quiser
+const SENHA_SECRETA = "Ko35wa#23"; // Troque pela senha que você quiser
 
 function verificarLogin() {
     let senhaDigitada = prompt("🔒 ACESSO RESTRITO: Digite a senha do sistema:");
@@ -135,4 +135,5 @@ function atualizarTela() {
   if (porcentagem < 0) porcentagem = 0;
   document.getElementById("xp-bar").style.width = porcentagem + "%";
 }
+
 
