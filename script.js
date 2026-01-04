@@ -1,4 +1,22 @@
-// Carrega dados
+// --- SISTEMA DE LOGIN SIMPLES ---
+const SENHA_SECRETA = "dev123"; // Troque pela senha que você quiser
+
+function verificarLogin() {
+    let senhaDigitada = prompt("🔒 ACESSO RESTRITO: Digite a senha do sistema:");
+    
+    if (senhaDigitada !== SENHA_SECRETA) {
+        alert("❌ Senha incorreta! Acesso negado.");
+        document.body.innerHTML = "<h1 style='color:white; text-align:center; margin-top:50px;'>⛔ ACESSO NEGADO</h1>";
+        document.body.style.backgroundColor = "black";
+        throw new Error("Acesso negado"); // Para a execução do script
+    }
+}
+
+// Chama a verificação assim que o site carrega
+verificarLogin();
+
+// --- ABAIXO COMEÇA O CÓDIGO DO JOGO ---
+// (Mantenha o resto do seu código aqui: let xpTotal = ...)// Carrega dados
 let xpTotal = Number(localStorage.getItem("xp")) || 0;
 let nivel = Number(localStorage.getItem("nivel")) || 1;
 let coins = Number(localStorage.getItem("coins")) || 0;
@@ -117,3 +135,4 @@ function atualizarTela() {
   if (porcentagem < 0) porcentagem = 0;
   document.getElementById("xp-bar").style.width = porcentagem + "%";
 }
+
